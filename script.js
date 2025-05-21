@@ -23,8 +23,6 @@
 // Favicon personnalisé : via balise <link rel="icon" ...>
 // Design : styles CSS avec couleurs, espaces, ombres, transitions, animations légères
 
-
-
 // ------------------------------PSEUDO CODE-------------------------------
 // 🟢 Niveau 1 – Récupérer les données de l'API
 // => fetch
@@ -32,6 +30,7 @@
 // => créer une fonction : function name(params) {}
 
 // / Utilise fetch() pour récupérer les données JSON depuis l'API https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/.
+
 fetch(
   "https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/vtc.json"
 )
@@ -73,7 +72,7 @@ fetch(
     // intégrer les data
     // section by id= appendChild
 
-    function services(typePrestation) {
+    function services() {
       let sectionCard = document.getElementById("sectionCard");
 
       let realisation = data.realisations;
@@ -112,7 +111,7 @@ fetch(
     // Placer la div dans la section section.appendChild(div)
     // forEach pour entrer les données de chaque témoignage
 
-    function avisClient(avis) {
+    function avisClient() {
       let sectionAvis = document.getElementById("avis");
       let temoignages = data.temoignages;
       console.log(temoignages);
