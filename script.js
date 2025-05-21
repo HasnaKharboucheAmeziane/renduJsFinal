@@ -33,80 +33,116 @@
 // => vérifier avec console.log();
 // => créer une fonction : function name(params) {}
 
+// / Utilise fetch() pour récupérer les données JSON depuis l'API https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/.
 fetch(
   "https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/json/vtc.json"
 )
   .then((response) => response.json())
   .then((data) => {
+    // Vérifie si la réponse de l'API est correcte. Si oui, passe les données à une fonction qui affichera le contenu du site.
     console.log(data);
     // console.log(Object.key(data));
 
+    // 🟡 Niveau 2 – Affichage du contenu principal
+    // Dans la fonction, crée un élément div pour afficher le nom de l'entreprise, sa phrase d'accroche et un bouton d'appel à l'action.
 
-// 🟡 Niveau 2 – Affichage du contenu principal
-// Dans la fonction, crée un élément div pour afficher le nom de l'entreprise, sa phrase d'accroche et un bouton d'appel à l'action.
+    // ------------------------------PSEUDO CODE----------------------------------
+    // => function name(params) {}
+    // => dans section createElement("div") dans appendChild section et dans div.appendchild h1,h2,button CTA
 
-// ------------------------------PSEUDO CODE----------------------------------
-// => function name(params) {}
-// => dans section createElement("div") dans appendChild section et dans div.appendchild h1,h2,button CTA
+    let container = document.getElementById("sectionHeros");
+    // Dans la fonction, crée un élément div pour afficher le nom de l'entreprise, sa phrase d'accroche et un bouton d'appel à l'action.
+    let title = document.createElement("h1");
+    let accroche = document.createElement("h2");
+    let buttonCTA = document.createElement("button");
+    let divHeros = document.createElement("div");
 
-let containerHeros = document.getElementById("sectionHeros");
+    container.appendChild(divHeros);
 
-let title = document.createElement("h1");
-let accroche = document.createElement("h2");
-let buttonCTA = document.createElement("button");
-let divHeros= document.createElement("div");
+    divHeros.appendChild(title);
+    divHeros.appendChild(accroche);
+    divHeros.appendChild(buttonCTA);
 
-containerHeros.appendChild(divHeros);
+    title.textContent = data.nomCommercial;
+    accroche.textContent = data.phraseAccroche;
 
-divHeros.appendChild(title);
-divHeros.appendChild(accroche);
-divHeros.appendChild(buttonCTA);
+    buttonCTA.textContent = `${data.texteAppelAction}`;
 
-title.textContent=data.nomCommercial;
-accroche.textContent=data.phraseAccroche;
+    // 🔴 Niveau 3 – Afficher les activités
+    // // Pour chaque activité dans les données JSON, crée dynamiquement une div contenant un titre, une description et une image.
+    // // Affiche ces informations dans une section dédiée, avec une carte pour chaque activité si les données contiennent un lien vers une image.
 
-buttonCTA.textContent=`${data.texteAppelAction}`;
+    // -------------------------PSEUDO CODE--------------------------------
+    // createElement divCard dans appendChild container(section)
+    // createElement h3, p, img dans divCard
+    // intégrer les data
+    // section by id= appendChild
 
-function services(heros) {
- 
-}
+    function services(typePrestation) {
+      let sectionCard = document.getElementById("sectionCard");
 
-// 🔴 Niveau 3 – Afficher les activités
-// // Pour chaque activité dans les données JSON, crée dynamiquement une div contenant un titre, une description et une image.
-// // Affiche ces informations dans une section dédiée, avec une carte pour chaque activité si les données contiennent un lien vers une image.
+      let realisation = data.realisations;
+      console.log(realisation);
 
-// -------------------------PSEUDO CODE--------------------------------
-// createElement divCard dans appendChild container(section) 
-// createElement h3, p, img dans divCard
-// intégrer les data
-// section by id= appendChild
+      realisation.forEach((e) => {
+        console.log(e);
+        console.log(e.titre);
+        let divCard = document.createElement("div");
+        divCard.classList.add("card");
 
-let sectionCard = document.getElementById("card");
-let divCard= document.createElement("div");
-sectionCard.appendChild(divCard);
+        sectionCard.appendChild(divCard);
 
-let h3= document.createElement("h3");
-let description= document.createElement("p");
-let image= document.createElement("img");
+        let h3 = document.createElement("h3");
+        let description = document.createElement("p");
+        let image = document.createElement("img");
 
-divCard.appendChild(h3);
-divCard.appendChild(description);
-divCard.appendChild(image);
+        divCard.appendChild(h3);
+        divCard.appendChild(description);
+        divCard.appendChild(image);
 
-let realisation= data.realisations;
-console.log(realisation);
+        h3.textContent = e.titre;
+        description.textContent = e.description;
+        image.src = e["image-url"];
+      });
+    }
 
-realisation.forEach(e => {
-    console.log(e);
-    console.log(e.titre);
-    h3.textContent= e.titre;
-description.textContent=e.description;
-image.src=e["image-url"];
-});
+    services();
 
+    // 🔴🔴 Niveau 4 – Afficher les témoignages
+    // Pour chaque témoignage dans les données JSON, crée dynamiquement une div contenant le prénom, le commentaire.
+    // Ajoute ces témoignages sous les activités dans la page.
+    // ----------------------------------PSEUDO CODE------------------------
+    // identifier la section dans le js : document.getElementById("section avis")
+    // créer élément div dans HTML: document.createElement("div")
+    // Placer la div dans la section section.appendChild(div)
+    // forEach pour entrer les données de chaque témoignage
 
+    function avisClient(avis) {
+      let sectionAvis = document.getElementById("avis");
+      let temoignages = data.temoignages;
+      console.log(temoignages);
 
+      temoignages.forEach((a) => {
+        console.log(a);
 
+        let divAvis = document.createElement("div");
+        sectionAvis.appendChild(divAvis);
 
+        let prenom = document.createElement("p");
+        let prestation = document.createElement("p");
+        let commentaire = document.createElement("p");
+        let note = document.createElement("p");
 
-});
+        divAvis.appendChild(prenom);
+        divAvis.appendChild(prestation);
+        divAvis.appendChild(commentaire);
+        divAvis.appendChild(note);
+
+        prenom.textContent = a.prenom;
+        prestation.textContent = a.typePrestation;
+        commentaire.textContent = a.commentaire;
+        note.textContent = a.note;
+      });
+    }
+    avisClient();
+  });
