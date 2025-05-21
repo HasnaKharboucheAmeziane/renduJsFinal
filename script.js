@@ -23,12 +23,10 @@
 // Favicon personnalisé : via balise <link rel="icon" ...>
 // Design : styles CSS avec couleurs, espaces, ombres, transitions, animations légères
 
-// 🟢 Niveau 1 – Récupérer les données de l'API
-// Utilise fetch() pour récupérer les données JSON depuis l'API https://js-dynamic-portfolio-data-makerslab-emlyon-cdweb-8f83155c64a0cc.gitlab.io/.
-// Tu as le choix du sujet, donc clique bien sur le sujet de ton choix pour avoir l'URL finale.
-// Vérifie si la réponse de l'API est correcte. Si oui, passe les données à une fonction qui affichera le contenu du site.
+
 
 // ------------------------------PSEUDO CODE-------------------------------
+// 🟢 Niveau 1 – Récupérer les données de l'API
 // => fetch
 // => vérifier avec console.log();
 // => créer une fonction : function name(params) {}
@@ -69,9 +67,6 @@ fetch(
     buttonCTA.textContent = `${data.texteAppelAction}`;
 
     // 🔴 Niveau 3 – Afficher les activités
-    // // Pour chaque activité dans les données JSON, crée dynamiquement une div contenant un titre, une description et une image.
-    // // Affiche ces informations dans une section dédiée, avec une carte pour chaque activité si les données contiennent un lien vers une image.
-
     // -------------------------PSEUDO CODE--------------------------------
     // createElement divCard dans appendChild container(section)
     // createElement h3, p, img dans divCard
@@ -93,16 +88,16 @@ fetch(
         sectionCard.appendChild(divCard);
 
         let h3 = document.createElement("h3");
-        let description = document.createElement("p");
         let image = document.createElement("img");
+        let description = document.createElement("p");
 
         divCard.appendChild(h3);
-        divCard.appendChild(description);
         divCard.appendChild(image);
+        divCard.appendChild(description);
 
         h3.textContent = e.titre;
-        description.textContent = e.description;
         image.src = e["image-url"];
+        description.textContent = e.description;
       });
     }
 
