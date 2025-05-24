@@ -54,6 +54,11 @@ fetch(
     let buttonCTA = document.createElement("button");
     let divHeros = document.createElement("div");
 
+    buttonCTA.classList.add("buttonBody");
+
+container.classList.add("imgBackground");
+
+
     container.appendChild(divHeros);
 
     divHeros.appendChild(title);
@@ -64,7 +69,7 @@ fetch(
     accroche.textContent = data.phraseAccroche;
 
     buttonCTA.textContent = `${data.texteAppelAction}`;
-
+    
     // 🔴 Niveau 3 – Afficher les activités
     // -------------------------PSEUDO CODE--------------------------------
     // createElement divCard dans appendChild container(section)
@@ -140,3 +145,26 @@ fetch(
     }
     avisClient();
   });
+
+
+
+  // ------------------------------------MENU BURGER-----------------------------------------
+
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+
+// Toggle (afficher et retirer) du menu au clic sur le burger
+burger.addEventListener("click", (e) => {
+  e.stopPropagation(); // Empêche la fermeture immédiate
+  navLinks.classList.toggle("active");
+  burger.classList.toggle("active");
+});
+
+// Fermer le menu si on clique ailleurs
+document.addEventListener("click", (e) => {
+  // Si on clique en dehors du menu et du burger
+  if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
+    navLinks.classList.remove("active");
+    burger.classList.remove("active");
+  }
+});
