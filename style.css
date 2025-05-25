@@ -1,8 +1,12 @@
 :root {
-  --grey: #505b6d;
+  --grey: #ECECEC;
   --black: #21242a;
   --white: #e8e9eb;
   --red: #9c2f2d;
+  --rose: #f36765;
+  --greyTitle:#cfc6c6;
+  text-align: center;
+  background-color: #b3acac;
 }
 
 * {
@@ -43,7 +47,8 @@ h3{
   font-size: 30px;
   line-height: 52px;
   margin-top: 26px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
+  color: var(--rose);
 }
 
 h1, h2, h3{
@@ -58,6 +63,9 @@ h1 {
   padding-top: 15%;
 }
 
+body{
+  background-color: var(--grey);
+}
 /* ------------------------------NAV----------------------------------------- */
 .burger {
   display: none;
@@ -79,10 +87,11 @@ nav {
   z-index: 1;
   background-color: var(--black);
   a {
+    cursor: pointer;
     color: var(--white);
     transition: color 0.3s ease;
     font-weight: 400;
-    width: 70%;
+    width: 30%;
   }
   li.button:hover {
     background-color: var(--red);
@@ -98,7 +107,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     /* Espace entre les liens */
-    width: 33%;
+    width: 55%;
   }
 }
 
@@ -115,26 +124,7 @@ nav {
   text-decoration: none;
   background-color: rgb(211, 6, 6);
 }
-
-#card {
-  display: flex;
-  flex-direction: column;
-}
-
-.card {
-  background-color: #e6dada;
-  color: #333333;
-  box-shadow: 0 4px 15px #00000029;
-  padding: 15px;
-  text-align: center;
-  width: 50%;
-  border-radius: 5px;
-  margin-bottom: 15px;
-
-  img {
-    width: 70%;
-  }
-}
+/* ---------------------------------------HEROS SECTION----------------- */
 
 .buttonBody{
   background-color: var(--red);
@@ -153,8 +143,54 @@ transform: scale(1.1);
   background-image: url("assets/Car\ Driving\ Realistic\ Design\ Concept\ -\ Modifié.jpg");
   background-size: cover;
   background-position: center;
-  padding: 100px;
+  padding: 320px;
   text-align: center;
- 
+  width: 98%;
+  padding-left: 50%; 
 }
+
+/* -----------------------------------SERVICES--------------------------------------- */
+
+.serviceTitle{
+  color: #21242a;
+  text-align: center;
+  background-color: var(--greyTitle);
+  padding-top: 26px;
+ padding-bottom: 26px;
+ margin-top: 15px;
+ margin-bottom: 15px;
+ text-wrap: nowrap;
+ width: 98%;
+}
+
+#card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: table;
+  flex-direction: row;
+  background-color: var(--black);
+  color:var(--white);
+  box-shadow: 0 4px 15px #00000029;
+  padding: 15px;
+  text-align: center;
+  width: 98%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+p{
+  color: var(--white);
+  margin-bottom: 10px;
+  text-align: center;
+}
+  img {
+    width: 750px;
+    height: 500px;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+}
+
+
 

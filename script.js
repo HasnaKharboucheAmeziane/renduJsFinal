@@ -91,10 +91,10 @@ container.classList.add("imgBackground");
 
         sectionCard.appendChild(divCard);
 
-        let h3 = document.createElement("h3");
         let image = document.createElement("img");
+        let h3 = document.createElement("h3");
         let description = document.createElement("p");
-
+         
         divCard.appendChild(h3);
         divCard.appendChild(image);
         divCard.appendChild(description);
