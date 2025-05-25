@@ -139,7 +139,7 @@ nav {
   transform: scale(1.1);
 }
 .imgBackground {
-  background-image: url("assets/Car\ Driving\ Realistic\ Design\ Concept\ -\ Modifié.jpg");
+  background-image: url("assets/carDrivingHeros.jpg");
   background-size: cover;
   background-position: center;
   padding: 320px;
@@ -297,7 +297,7 @@ footer {
 
     .burger {
       display: block;
-      font-size: 45px;
+      font-size: 40px;
       cursor: pointer;
       color: var(--white);
     }
@@ -338,7 +338,7 @@ footer {
     transform: scale(1.1);
   }
   .imgBackground {
-    background-image: url("assets/Car\ Driving\ Realistic\ Design\ Concept\ -\ Modifié.jpg");
+    background-image: url("assets/carDrivingHeros.jpg");
     background-size: cover;
     background-position: center;
     padding: 30px;
