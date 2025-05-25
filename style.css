@@ -1,10 +1,10 @@
 :root {
-  --grey: #ECECEC;
+  --grey: #ececec;
   --black: #21242a;
   --white: #e8e9eb;
   --red: #9c2f2d;
   --rose: #f36765;
-  --greyTitle:#cfc6c6;
+  --greyTitle: #cfc6c6;
   text-align: center;
   background-color: #b3acac;
 }
@@ -26,24 +26,23 @@
 
   font-size: 20px;
   line-height: 26px;
-  
-  margin: auto;
 
+  margin: auto;
 }
-h1{
+h1 {
   font-size: 68px;
   line-height: 26px;
   margin-bottom: 52px;
   color: var(--white);
 }
-h2{
+h2 {
   font-size: 45px;
   line-height: 52px;
   margin-top: 26px;
   margin-bottom: 26px;
   color: var(--white);
 }
-h3{
+h3 {
   font-size: 30px;
   line-height: 52px;
   margin-top: 26px;
@@ -51,7 +50,9 @@ h3{
   color: var(--rose);
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   font-family: "Genos", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
@@ -63,7 +64,7 @@ h1 {
   padding-top: 15%;
 }
 
-body{
+body {
   background-color: var(--grey);
 }
 /* ------------------------------NAV----------------------------------------- */
@@ -99,7 +100,7 @@ nav {
     padding: 10px 20px;
   }
   img {
-    width: 170px;
+    width: 100px;
     object-fit: cover;
   }
   ul {
@@ -126,41 +127,39 @@ nav {
 }
 /* ---------------------------------------HEROS SECTION----------------- */
 
-.buttonBody{
+.buttonBody {
   background-color: var(--red);
   border-radius: 10px 10px 10px;
   padding: 15px 30px;
   color: var(--white);
   border: none;
   cursor: pointer;
-  
 }
-.buttonBody:hover{
-transform: scale(1.1);
-
-  }
-.imgBackground{
+.buttonBody:hover {
+  transform: scale(1.1);
+}
+.imgBackground {
   background-image: url("assets/Car\ Driving\ Realistic\ Design\ Concept\ -\ Modifié.jpg");
   background-size: cover;
   background-position: center;
   padding: 320px;
   text-align: center;
   width: 98%;
-  padding-left: 50%; 
+  padding-left: 50%;
 }
 
 /* -----------------------------------SERVICES--------------------------------------- */
 
-.sectionTitle{
+.sectionTitle {
   color: #21242a;
   text-align: center;
   background-color: var(--greyTitle);
   padding-top: 26px;
- padding-bottom: 26px;
- margin-top: 15px;
- margin-bottom: 15px;
- text-wrap: nowrap;
- width: 98%;
+  padding-bottom: 26px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-wrap: nowrap;
+  width: 98%;
 }
 
 #card {
@@ -172,19 +171,19 @@ transform: scale(1.1);
   display: table;
   flex-direction: row;
   background-color: var(--black);
-  color:var(--white);
+  color: var(--white);
   box-shadow: 0 4px 15px #00000029;
   padding: 15px;
   text-align: center;
   width: 98%;
   border-radius: 5px;
   margin-bottom: 15px;
-p{
-  color: var(--white);
-  margin-bottom: 10px;
-  text-align: center;
-  padding-inline: 30%;
-}
+  p {
+    color: var(--white);
+    margin-bottom: 10px;
+    text-align: center;
+    padding-inline: 30%;
+  }
   img {
     width: 750px;
     height: 500px;
@@ -195,22 +194,23 @@ p{
 
 /* -------------------------------------------AVIS CLIENT ----------------------- */
 
-#avis{
+#avis {
   display: flex;
+  justify-content: center;
 }
-.cardAvis{
+.cardAvis {
   flex-direction: row;
- background-color: rgb(70, 69, 69);
-  color:var(--white);
+  background-color: rgb(70, 69, 69);
+  color: var(--white);
   box-shadow: 0 4px 15px #00000029;
   padding: 15px;
   text-align: center;
-  width:300px;
+  width: 300px;
   height: 400px;
   border-radius: 5px;
   margin-bottom: 15px;
   align-content: center;
-  p{
+  p {
     color: var(--white);
     margin-bottom: 10px;
     text-align: center;
@@ -220,19 +220,19 @@ p{
 }
 /* -----------------------------------FOOTER---------------------------- */
 
-footer{
+footer {
   display: flex;
   background-color: var(--black);
   padding-block: 25px;
-  img{
-    width: 170px;
+  img {
+    width: 100px;
     object-fit: cover;
   }
-  li a{
+  li a {
     color: var(--white);
     line-height: 45px;
-    }
-  
+  }
+
   a {
     cursor: pointer;
     color: var(--white);
@@ -240,24 +240,22 @@ footer{
     font-weight: 400;
     width: 30%;
     font-size: 16px;
-    
   }
- li a:hover {
-  color: var(--rose);
+  li a:hover {
+    color: var(--rose);
+  }
 
-  }
- 
-  #f-row3{
+  #f-row3 {
     display: flex;
     flex-direction: column;
-    p{
+    p {
       color: var(--white);
       font-size: 16px;
       a:hover {
         color: var(--rose);
+      }
     }
   }
-}
 }
 /* -----------------------------------MOBILE--------------------------- */
 @media screen and (max-width: 650px) {
@@ -273,123 +271,122 @@ footer{
     z-index: 1;
     position: fixed;
     margin: 0;
-    padding: 10px;
+    padding: 15px;
     padding-inline: 0;
-    img{
+    img {
       width: 70px;
     }
 
     ul {
       /* flex-direction: column; */
       width: 100%;
-      img{
+      img {
         padding-top: 5px;
-       }
+      }
       li {
         font-size: 18px;
         line-height: 50px;
-       border-top:  solid 1px rgb(55, 53, 53);
-       width: 100%;
-       
+        border-top: solid 1px rgb(55, 53, 53);
+        width: 100%;
+        padding-top: 15px;
       }
     }
- .iconPhone{
-  padding-top: 15px;
- }
+    .iconPhone {
+      padding-top: 15px;
+    }
 
-  .burger {
-    display: block;
-    font-size: 45px;
-    cursor: pointer;
+    .burger {
+      display: block;
+      font-size: 45px;
+      cursor: pointer;
+      color: var(--white);
+    }
+
+    #nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      background-color: var(--black);
+      width: 100%;
+      align-items: end;
+      z-index: 1;
+    }
+    #nav-links.active {
+      display: flex;
+      width: 100%;
+      /* occupe toute la largeur */
+    }
+  }
+  /* ------------------------SECTION HEROS------------------- */
+
+  * {
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  .buttonBody {
+    background-color: var(--red);
+    border-radius: 10px 10px 10px;
+    padding: 15px 30px;
     color: var(--white);
+    border: none;
+    cursor: pointer;
   }
-
-  #nav-links {
-    display: none;
-    flex-direction: column;
-  position: absolute;
-    top: 100%;
-    background-color:var(--black);
-    width: 100%;
-    align-items: end;
-    z-index: 1;
+  .buttonBody:hover {
+    transform: scale(1.1);
   }
-  #nav-links.active {
-    display: flex;
-    width: 100%;
-    /* occupe toute la largeur */
+  .imgBackground {
+    background-image: url("assets/Car\ Driving\ Realistic\ Design\ Concept\ -\ Modifié.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    text-align: center;
+    width: 98%;
+    padding-left: 10%;
   }
-}
-/* ------------------------SECTION HEROS------------------- */
-
-*{
-  h2{
+  h1 {
+    font-size: 40px;
+    padding-top: 50%;
+  }
+  h2 {
     font-size: 30px;
   }
-}
 
-.buttonBody{
-  background-color: var(--red);
-  border-radius: 10px 10px 10px;
-  padding: 15px 30px;
-  color: var(--white);
-  border: none;
-  cursor: pointer;
-  
-}
-.buttonBody:hover{
-transform: scale(1.1);
+  /* --------------------------------CARD------------------------- */
 
-  }
-.imgBackground{
-  background-image: url("assets/Car\ Driving\ Realistic\ Design\ Concept\ -\ Modifié.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 30px;
-  text-align: center;
-  width: 98%;
-  padding-left: 10%; 
-}
-h1{
-  font-size: 40px;
-  padding-top: 50%;
-}
-h2{
-  font-size: 30px;
-}
-
-/* --------------------------------CARD------------------------- */
-
-.card{
-  width: 98%;
-  img{
+  .card {
     width: 98%;
-    height: auto;
+    img {
+      width: 98%;
+      height: auto;
+    }
+    p {
+      padding-inline: 15px;
+    }
   }
-  p{
-    padding-inline: 15px;
-  }
-}
 
-/* -----------------------------AVIS---------------------------- */
+  /* -----------------------------AVIS---------------------------- */
 
-#avis{
-  display: flex;
-  flex-direction: column;
-}
-/* --------------------------FOOTER--------------------------- */
-footer{
-  flex-direction: column;
-  img{
-    width: 120px;
-    object-fit: cover;
+  #avis {
+    display: flex;
+    flex-direction: column;
   }
-  li p{
-    line-height: 45px;
+  /* --------------------------FOOTER--------------------------- */
+  footer {
+    flex-direction: column;
+    img {
+      width: 120px;
+      object-fit: cover;
+    }
+    li p {
+      line-height: 45px;
+    }
+    #f-row3 {
+      p {
+        line-height: 45px;
+      }
+    }
   }
-  #f-row3{
-   p{line-height: 45px;
-   } 
-  }
-}
 }
