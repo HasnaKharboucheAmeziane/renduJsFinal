@@ -215,7 +215,46 @@ p{
     margin-bottom: 10px;
     text-align: center;
     align-content: center;
-    
+    font-style: italic;
   }
 }
 /* -----------------------------------FOOTER---------------------------- */
+
+footer{
+  display: flex;
+  background-color: var(--black);
+  padding-block: 25px;
+  img{
+    width: 170px;
+    object-fit: cover;
+  }
+  li a{
+    color: var(--white);
+    line-height: 45px;
+    }
+  
+  a {
+    cursor: pointer;
+    color: var(--white);
+    transition: color 0.3s ease;
+    font-weight: 400;
+    width: 30%;
+    font-size: 16px;
+    
+  }
+ li a:hover {
+  color: var(--rose);
+
+  }
+ 
+  #f-row3{
+    display: flex;
+    flex-direction: column;
+    p{
+      color: var(--white);
+      font-size: 16px;
+      a:hover {
+        color: var(--rose);
+    }
+  }
+}

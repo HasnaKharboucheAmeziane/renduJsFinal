@@ -69,6 +69,9 @@ container.classList.add("imgBackground");
     accroche.textContent = data.phraseAccroche;
 
     buttonCTA.textContent = `${data.texteAppelAction}`;
+    document.querySelector(".buttonBody").addEventListener("click", function() {
+      window.location.href = "mailto:hasnakharbouche@gmail.com";
+    });
     
     // 🔴 Niveau 3 – Afficher les activités
     // -------------------------PSEUDO CODE--------------------------------
