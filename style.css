@@ -258,3 +258,170 @@ footer{
     }
   }
 }
+}
+/* -----------------------------------MOBILE--------------------------- */
+@media screen and (max-width: 650px) {
+  html,
+  .root {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  /* ----------------------NAV---------------------- */
+  nav {
+    display: flex;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+
+    ul {
+      flex-direction: column;
+      li {
+        font-size: 18px;
+        line-height: 2.1;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding-right: 24px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #292c31;
+    width: 100%;
+    text-align: center;
+    align-items: end;
+  }
+
+  .nav-links.active {
+    display: flex;
+    /* rend le menu vsible */
+  }
+
+  .burger {
+    display: block;
+  }
+
+  ul {
+    width: 100%;
+
+    /* occupe toute la largeur */
+    li {
+      font-size: 18px;
+      padding: 1%;
+    }
+  }
+/* ------------------------SECTION HEROS------------------- */
+
+*{
+  h2{
+    font-size: 30px;
+  }
+}
+
+
+.buttonBody{
+  background-color: var(--red);
+  border-radius: 10px 10px 10px;
+  padding: 15px 30px;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  
+}
+.buttonBody:hover{
+transform: scale(1.1);
+
+  }
+.imgBackground{
+  background-image: url("assets/Car\ Driving\ Realistic\ Design\ Concept\ -\ Modifié.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  text-align: center;
+  width: 98%;
+  padding-left: 10%; 
+}
+h1{
+  font-size: 40px;
+  padding-top: 85%;
+}
+h2{
+  font-size: 30px;
+}
+
+/* --------------------------------CARD------------------------- */
+
+.card{
+  width: 98%;
+  img{
+    width: 98%;
+    height: auto;
+  }
+  p{
+    padding-inline: 15px;
+  }
+}
+
+/* -----------------------------AVIS---------------------------- */
+
+#avis{
+  display: flex;
+  flex-direction: column;
+}
+/* --------------------------FOOTER--------------------------- */
+footer{
+  display: flex;
+  background-color: var(--black);
+  padding-block: 25px;
+  img{
+    width: 120px;
+    object-fit: cover;
+  }
+  li a{
+    color: var(--white);
+    line-height: 45px;
+    }
+  
+  a {
+    cursor: pointer;
+    color: var(--white);
+    transition: color 0.3s ease;
+    font-weight: 400;
+    width: 30%;
+    font-size: 15px;
+    
+  }
+ li a:hover {
+  color: var(--rose);
+
+  }
+ 
+  #f-row3{
+    display: flex;
+    flex-direction: column;
+    p{
+      color: var(--white);
+      font-size: 16px;
+      a:hover {
+        color: var(--rose);
+    }
+  }
+  img{
+    width: 45px;
+  }
+}
+}
+
+
+
+}

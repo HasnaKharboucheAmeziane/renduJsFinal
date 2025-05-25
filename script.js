@@ -160,23 +160,22 @@ container.classList.add("imgBackground");
 
   // ------------------------------------MENU BURGER-----------------------------------------
 
-const burger = document.getElementById("burger");
-const navLinks = document.getElementById("nav-links");
-
-// Toggle (afficher et retirer) du menu au clic sur le burger
-burger.addEventListener("click", (e) => {
-  e.stopPropagation(); // Empêche la fermeture immédiate
-  navLinks.classList.toggle("active");
-  burger.classList.toggle("active");
-});
-
-// Fermer le menu si on clique ailleurs
-document.addEventListener("click", (e) => {
-  // Si on clique en dehors du menu et du burger
-  if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
-    navLinks.classList.remove("active");
-    burger.classList.remove("active");
-  }
-});
-
+  const burger = document.getElementById("burger");
+  const navLinks = document.getElementById("nav-links");
+  
+  // Toggle (afficher et retirer) du menu au clic sur le burger
+  burger.addEventListener("click", (e) => {
+    e.stopPropagation(); // Empêche la fermeture immédiate
+    navLinks.classList.toggle("active");
+    burger.classList.toggle("active");
+  });
+  
+  // Fermer le menu si on clique ailleurs
+  document.addEventListener("click", (e) => {
+    // Si on clique en dehors du menu et du burger
+    if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
+      navLinks.classList.remove("active");
+      burger.classList.remove("active");
+    }
+  });
 
