@@ -125,6 +125,7 @@ container.classList.add("imgBackground");
         console.log(a);
 
         let divAvis = document.createElement("div");
+        divAvis.classList.add("cardAvis");
         sectionAvis.appendChild(divAvis);
 
         let prenom = document.createElement("p");
@@ -145,6 +146,12 @@ container.classList.add("imgBackground");
     }
     avisClient();
   });
+// ---------------------------CARROUSSEL AVIS----------------------------------------
+
+
+
+
+
 
 
 
@@ -168,3 +175,5 @@ document.addEventListener("click", (e) => {
     burger.classList.remove("active");
   }
 });
+
+

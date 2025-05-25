@@ -151,7 +151,7 @@ transform: scale(1.1);
 
 /* -----------------------------------SERVICES--------------------------------------- */
 
-.serviceTitle{
+.sectionTitle{
   color: #21242a;
   text-align: center;
   background-color: var(--greyTitle);
@@ -183,6 +183,7 @@ p{
   color: var(--white);
   margin-bottom: 10px;
   text-align: center;
+  padding-inline: 30%;
 }
   img {
     width: 750px;
@@ -192,5 +193,29 @@ p{
   }
 }
 
+/* -------------------------------------------AVIS CLIENT ----------------------- */
 
-
+#avis{
+  display: flex;
+}
+.cardAvis{
+  flex-direction: row;
+ background-color: rgb(70, 69, 69);
+  color:var(--white);
+  box-shadow: 0 4px 15px #00000029;
+  padding: 15px;
+  text-align: center;
+  width:300px;
+  height: 400px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  align-content: center;
+  p{
+    color: var(--white);
+    margin-bottom: 10px;
+    text-align: center;
+    align-content: center;
+    
+  }
+}
+/* -----------------------------------FOOTER---------------------------- */
