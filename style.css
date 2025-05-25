@@ -382,7 +382,7 @@ h2{
 footer{
   display: flex;
   background-color: var(--black);
-  padding-block: 25px;
+  padding-block: 15px;
   img{
     width: 120px;
     object-fit: cover;
@@ -421,7 +421,5 @@ footer{
   }
 }
 }
-
-
 
 }
