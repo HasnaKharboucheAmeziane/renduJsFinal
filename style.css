@@ -272,54 +272,53 @@ footer{
     width: 100%;
     z-index: 1;
     position: fixed;
+    margin: 0;
+    padding-inline: 0;
+    img{
+      width: 120px;
+    }
 
     ul {
-      flex-direction: column;
+      /* flex-direction: column; */
+      width: 100%;
+      img{
+        padding-top: 5px;
+       }
       li {
         font-size: 18px;
-        line-height: 2.1;
-        margin-bottom: 20px;
+        line-height: 50px;
+       border-top:  solid 1px rgb(55, 53, 53);
+       width: 100%;
+       
       }
     }
-  }
-
-  .burger {
-    display: none;
-    font-size: 2em;
-    cursor: pointer;
-    padding-right: 24px;
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background-color: #292c31;
-    width: 100%;
-    text-align: center;
-    align-items: end;
-  }
-
-  .nav-links.active {
-    display: flex;
-    /* rend le menu vsible */
-  }
+ .iconPhone{
+  padding-top: 15px;
+ }
 
   .burger {
     display: block;
+    font-size: 45px;
+    cursor: pointer;
+    color: var(--white);
   }
 
-  ul {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+  position: absolute;
+    top: 100%;
+    background-color:var(--black);
     width: 100%;
-
-    /* occupe toute la largeur */
-    li {
-      font-size: 18px;
-      padding: 1%;
-    }
+    align-items: end;
+    z-index: 1;
   }
+  #nav-links.active {
+    display: flex;
+    width: 100%;
+    /* occupe toute la largeur */
+  }
+}
 /* ------------------------SECTION HEROS------------------- */
 
 *{
@@ -353,7 +352,7 @@ transform: scale(1.1);
 }
 h1{
   font-size: 40px;
-  padding-top: 85%;
+  padding-top: 50%;
 }
 h2{
   font-size: 30px;
