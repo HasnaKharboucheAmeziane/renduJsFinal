@@ -56,8 +56,7 @@ fetch(
 
     buttonCTA.classList.add("buttonBody");
 
-container.classList.add("imgBackground");
-
+    container.classList.add("imgBackground");
 
     container.appendChild(divHeros);
 
@@ -69,10 +68,12 @@ container.classList.add("imgBackground");
     accroche.textContent = data.phraseAccroche;
 
     buttonCTA.textContent = `${data.texteAppelAction}`;
-    document.querySelector(".buttonBody").addEventListener("click", function() {
-      window.location.href = "mailto:hasnakharbouche@gmail.com";
-    });
-    
+    document
+      .querySelector(".buttonBody")
+      .addEventListener("click", function () {
+        window.location.href = "mailto:hasnakharbouche@gmail.com";
+      });
+
     // 🔴 Niveau 3 – Afficher les activités
     // -------------------------PSEUDO CODE--------------------------------
     // createElement divCard dans appendChild container(section)
@@ -97,14 +98,18 @@ container.classList.add("imgBackground");
         let image = document.createElement("img");
         let h3 = document.createElement("h3");
         let description = document.createElement("p");
-         
-        divCard.appendChild(h3);
+        let buttonCard = document.createElement("button");
+
         divCard.appendChild(image);
+        divCard.appendChild(h3);
         divCard.appendChild(description);
+        divCard.appendChild(buttonCard);
+        buttonCard.classList.add("buttonBody");
 
         h3.textContent = e.titre;
         image.src = e["image-url"];
         description.textContent = e.description;
+        buttonCard.textContent = "Réserver un chauffeur";
       });
     }
 
@@ -144,43 +149,45 @@ container.classList.add("imgBackground");
         prenom.textContent = a.prenom;
         prestation.textContent = a.typePrestation;
         commentaire.textContent = a.commentaire;
-        note.textContent = a.note+" /5";
+        note.textContent = a.note + " /5";
+
+        prestation.style.color="#f36765";
+        prestation.style.fontSize="22px";
       });
     }
     avisClient();
   });
 // ---------------------------CARROUSSEL AVIS----------------------------------------
 
-
-
-
 // -------------------------------------MAP-----------------------------------------
 
-var map = L.map('map').setView([45.741414, 4.839423], 13);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var map = L.map("map").setView([45.188529, 5.724524], 13);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  attribution:
+    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
-var marker = L.marker([45.741414, 4.839423]).addTo(map);
-marker.bindPopup("<b>Bonjour!</b><br>Je suis à cette emplacement actuellement.").openPopup();
-  // ------------------------------------MENU BURGER-----------------------------------------
+var marker = L.marker([45.188529, 5.724524]).addTo(map);
+marker
+  .bindPopup("<b>TroVit</b><br> place Victor Hugo, <br> 38000 Grenoble")
+  .openPopup();
+// ------------------------------------MENU BURGER-----------------------------------------
 
-  const burger = document.getElementById("burger");
-  const navLinks = document.getElementById("nav-links");
-  
-  // Toggle (afficher et retirer) du menu au clic sur le burger
-  burger.addEventListener("click", (e) => {
-    e.stopPropagation(); // Empêche la fermeture immédiate
-    navLinks.classList.toggle("active");
-    burger.classList.toggle("active");
-  });
-  
-  // Fermer le menu si on clique ailleurs
-  document.addEventListener("click", (e) => {
-    // Si on clique en dehors du menu et du burger
-    if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
-      navLinks.classList.remove("active");
-      burger.classList.remove("active");
-    }
-  });
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
 
+// Toggle (afficher et retirer) du menu au clic sur le burger
+burger.addEventListener("click", (e) => {
+  e.stopPropagation(); // Empêche la fermeture immédiate
+  navLinks.classList.toggle("active");
+  burger.classList.toggle("active");
+});
+
+// Fermer le menu si on clique ailleurs
+document.addEventListener("click", (e) => {
+  // Si on clique en dehors du menu et du burger
+  if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
+    navLinks.classList.remove("active");
+    burger.classList.remove("active");
+  }
+});
