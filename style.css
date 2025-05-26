@@ -298,12 +298,13 @@ footer {
   /* ----------------------NAV---------------------- */
   nav {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     z-index: 1;
     position: fixed;
-    margin: 0;
     padding: 15px;
     padding-inline: 0;
+    margin: auto;
     img {
       width: 70px;
     }
