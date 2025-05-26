@@ -4,68 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Genos:wght@800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Genos:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="icon" type="image/png" href="assets/logoVTC.png">
+    <link rel="icon" href="assets/logoVTC.png" />
 
+    <!-- link Map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
 
-
-    
     <title>TroVit</title>
   </head>
 
   <body>
     <header>
       <nav>
-          <a href="index.html"><img id="logo" src="assets/logoVTC.png" alt="logo Tro Vit"></a>
-  
-          <div class="burger" id="burger">
-              ☰
-          </div>
-  
-          <ul id="nav-links">
-              <li class="button"><a href="#services">Services</a></li>
-              <li class="button"><a href="#avisClient">Avis Client</a></li> 
-              <li class="button"><a href="#contact">Contact</a></li>
-              <li><a class="iconPhone" href="tel:+33625563904"><img src="assets/si_phone-fill.png" alt="Appeler"></a></li>
-          </ul>
+        <a href="index.html"
+          ><img id="logo" src="assets/logoVTC.png" alt="logo Tro Vit"
+        /></a>
+
+        <div class="burger" id="burger">☰</div>
+
+        <ul id="nav-links">
+          <li class="button"><a href="#services">Services</a></li>
+          <li class="button"><a href="#avisClient">Avis Client</a></li>
+          <li class="button"><a href="#contact">Contact</a></li>
+          <li>
+            <a class="iconPhone" href="tel:+33625563904"
+              ><img src="assets/si_phone-fill.png" alt="Appeler"
+            /></a>
+          </li>
+        </ul>
       </nav>
-  </header>
+    </header>
 
-<main>
-    <section id="sectionHeros"></section>
-    <h2  id="services" class="sectionTitle">SERVICES</h2>
-    <section  id="sectionCard" ></section>
-    <h2  id="avisClient" class="sectionTitle">AVIS CLIENTS</h2>
-    <section id="avis"></section>
+    <main>
+      <section id="sectionHeros"></section>
 
-   
+      <h2 id="services" class="sectionTitle">MA POSITION ACTUELLE</h2>
+      <div id="map"></div>
 
-  </main>
+      <h2 id="services" class="sectionTitle">SERVICES</h2>
+      <section id="sectionCard"></section>
+      <h2 id="avisClient" class="sectionTitle">AVIS CLIENTS</h2>
+      <section id="avis"></section>
+    </main>
 
-  <footer id="contact">
-    <div id="f_row1">
-      <a href="index.html"><img id="logo" src="assets/logoVTC.png" alt="logo Tro Vit"></a>
-    </div>
-    <div id="f_row2">
-      <ul id="nav-links">
-        <li class="button"><a href="#services">Services</a></li>
-        <li class="button"><a href="#avisClient">Avis Client</a></li> 
-    </ul>
-    </div>
-    <div id="f-row3">
-      <!-- <p><a class="iconPhone" href="tel:+33625563904"><img src="assets/si_phone-fill.png" alt="Appeler"></a></p> -->
-      <button class="buttonBody"> <a href="mailto:hasnakharbouchepro@gmail.com"></a>Réserver un Chauffeur</button>
-      <p><a href="tel:+33625563904">+33(0)7 60 99 88 66</a></p>
-      <p><a href="mailto:hasnakharbouchepro@gmail.com">contact@trovit.fr</a></p>
-    </div>
-  </footer>
-
+    <footer id="contact">
+      <div id="f_row1">
+        <a href="index.html"
+          ><img id="logo" src="assets/logoVTC.png" alt="logo Tro Vit"
+        /></a>
+      </div>
+      <div id="f_row2">
+        <ul id="nav-links">
+          <li class="button"><a href="#services">Services</a></li>
+          <li class="button"><a href="#avisClient">Avis Client</a></li>
+        </ul>
+      </div>
+      <div id="f-row3">
+        <!-- <p><a class="iconPhone" href="tel:+33625563904"><img src="assets/si_phone-fill.png" alt="Appeler"></a></p> -->
+        <button class="buttonBody">
+          <a href="mailto:hasnakharbouchepro@gmail.com"></a>Réserver un
+          Chauffeur
+        </button>
+        <p><a href="tel:+33625563904">+33(0)7 60 99 88 66</a></p>
+        <p>
+          <a href="mailto:hasnakharbouchepro@gmail.com">contact@trovit.fr</a>
+        </p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
