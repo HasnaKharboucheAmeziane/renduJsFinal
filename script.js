@@ -144,7 +144,7 @@ container.classList.add("imgBackground");
         prenom.textContent = a.prenom;
         prestation.textContent = a.typePrestation;
         commentaire.textContent = a.commentaire;
-        note.textContent = a.note;
+        note.textContent = a.note+" /5";
       });
     }
     avisClient();
