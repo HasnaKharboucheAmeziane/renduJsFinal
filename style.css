@@ -243,7 +243,7 @@ nav {
 #map {
   height: 550px;
   width: 90%;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   z-index: 0;
 }
 
@@ -409,7 +409,16 @@ footer {
   #avis {
     display: flex;
     flex-direction: column;
+    margin-inline: 46px;
   }
+  .cardAvis{
+    width: 341px;
+  }
+/* ----------------------------------MAP----------------------------- */
+#map {
+  width: 100%;
+  margin-bottom: 35px;
+}
   /* --------------------------FOOTER--------------------------- */
   footer {
     flex-direction: column;
