@@ -401,6 +401,7 @@ footer {
     }
   h3{
     text-wrap: initial;
+    /* garde le texte sur 1 ligne */
   }
   }
 
